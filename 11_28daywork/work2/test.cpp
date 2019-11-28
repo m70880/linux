@@ -5,12 +5,13 @@ using namespace std;
 string compstring(string&s1,string& s2){
     string big;
     string small;
+    string tmp;
     big=s1.size()>s2.size()?s1:s2;
     small=s1.size()>s2.size()?s2:s1;
     int len=small.size();
-    for(int head=0;head<len;head++){
-        for(int real=len-head;real>head+1;real--){
-            string tmp=small.substr(head,real);
+    for(size_t number=len;number>=1;number--){
+        for(size_t pos=0;pos<len-number;pos++){
+            tmp=small.substr(pos,number);
             if(big.find(tmp)!=string::npos){
                 return tmp;
             }
