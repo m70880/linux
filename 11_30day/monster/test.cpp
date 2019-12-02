@@ -28,14 +28,14 @@ int main(){
     int n;
     int tmp;
     vector<int> monster;
-    while(cin>>n){
-        cin>>power;
-       while(cin>>tmp){
+    while(cin>>n>>power){
+       while(n--){
+           cin>>tmp;
            monster.push_back(tmp);
         }
-       //进行打怪升级
       playMonster(monster,power); 
       cout<<power<<endl;
+        monster.clear();
     }
 
 
