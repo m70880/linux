@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+
 int getfacter(int m,int n){
     int max=m>n?m:n;
     int min=m>n?n:m;
